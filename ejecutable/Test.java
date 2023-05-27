@@ -1,6 +1,8 @@
 package ejecutable;
 
 import modelo.Fecha;
+import modelo.FechaDetallada;
+import modelo.MuestraConjunto;
 
 public class Test{
     public static void main(String[] args) 
@@ -40,5 +42,10 @@ public class Test{
         {
             System.out.println("Las fechas no son iguales");
         }
+
+        Object[] arr = {new Fecha(2,10,1970), new FechaDetallada(23,12,1248), new String("esto es una cadena"), new Integer(34)};
+
+        //como el metodo es statico lo invocamos a traves de la clase
+        MuestraConjunto.mostrar(arr);
     }
 }
